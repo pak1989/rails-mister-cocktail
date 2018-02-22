@@ -10,7 +10,6 @@ class DosesController < ApplicationController
   def create
     @dose = Dose.new(dose_params)
     if @dose.save
-      # byebug
       redirect_to @dose.cocktail
     else
       render :new
